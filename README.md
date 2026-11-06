@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StudyHub – MSBTE K-Scheme Notes & Study App
 
-## Getting Started
+Modern Next.js application providing MSBTE K-Scheme diploma study notes, syllabus, and unit-wise MCQs.
 
-First, run the development server:
+## 🚀 How to Deploy on Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Method 1: Deploy via GitHub (Recommended & Simplest)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Upload / Push this project to GitHub**:
+   - Create a new repository on [GitHub](https://github.com/new).
+   - Push this project folder (`studyhub`) to your GitHub repository.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Import to Vercel**:
+   - Go to [vercel.com](https://vercel.com) and log in.
+   - Click **"Add New..."** → **"Project"**.
+   - Select your GitHub repository.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Deploy settings**:
+   - **Framework Preset**: `Next.js` (automatically detected)
+   - **Root Directory**: `./` (default)
+   - **Build Command**: `next build` (default)
+   - **Output Directory**: `.next` (default)
+   - Click **"Deploy"**.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### Method 2: Deploy using Vercel CLI from your Terminal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Open PowerShell / Command Prompt in the `studyhub` folder:
+   ```bash
+   cd C:\Users\Pratik\.gemini\antigravity\scratch\studyhub
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Run the Vercel deployment command:
+   ```bash
+   npx vercel
+   ```
 
-## Deploy on Vercel
+3. Follow the on-screen prompts:
+   - Log in to your Vercel account via the browser link.
+   - Confirm project settings (hit Enter for defaults).
+   - To deploy to production, run:
+     ```bash
+     npx vercel --prod
+     ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Key Files Configured for Vercel
+
+- `vercel.json`: Sets standard Next.js framework configuration and sets proper caching & inline headers for notes PDFs.
+- `next.config.ts`: Configured for Next.js 16 with optimized build settings.
+- `.gitignore`: Excludes build artifacts (`.next`), dependencies (`node_modules`), and secrets (`.env`).
+- `public/notes/physics/`: Houses unit-wise notes PDFs (`unit_1.pdf`, `unit_2.pdf`, `unit_3.pdf`, `studyhub_physics_complete_notes.pdf`).
