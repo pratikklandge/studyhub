@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import MobileStatusBar from "@/components/mobile/MobileStatusBar";
 import WelcomeScreen from "@/components/mobile/WelcomeScreen";
 import LoginScreen from "@/components/mobile/LoginScreen";
 import SelectStandardScreen from "@/components/mobile/SelectStandardScreen";
@@ -130,9 +129,6 @@ export default function Home() {
             : "max-w-2xl min-h-screen sm:min-h-[820px] sm:rounded-3xl sm:border border-slate-700 shadow-2xl"
         }`}
       >
-        {/* Mobile Device Status Bar */}
-        <MobileStatusBar />
-
         {/* Dynamic Screen Container */}
         <main className="flex-1 flex flex-col overflow-y-auto">
           {/* TAB: Resources Tab */}
